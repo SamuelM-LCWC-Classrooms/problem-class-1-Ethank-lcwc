@@ -99,4 +99,3 @@ def task_5():
             height += 1
 
     return height
-print(task_5())
