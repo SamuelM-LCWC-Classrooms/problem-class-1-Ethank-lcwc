@@ -53,13 +53,13 @@ def test_negative_tip_prompt():
 def test_large_tip():
     with patch('builtins.input', side_effect=['50']):
         result = task.task_2(200)  # Cost of meal is 200
-        expected = 290.0  # 200 + (200 * 0.20) + (50% of 200) = 200 + 40 + 100
+        expected = 340.0  # 200 + (200 * 0.20) + (50% of 200) = 200 + 40 + 100
         assert result == expected
 
 def test_tip_with_float_input():
     with patch('builtins.input', side_effect=['15.5']):
         result = task.task_2(80)  # Cost of meal is 80
-        expected = 114.4  # 80 + (80 * 0.20) + (15.5% of 80) = 80 + 16 + 12.4
+        expected = 108.4  # 80 + (80 * 0.20) + (15.5% of 80) = 80 + 16 + 12.4
         assert result == expected
 
 def test_valid_input_fizzbuzz_15():
@@ -169,7 +169,7 @@ def test_pyramid_height_1_block():
 def test_pyramid_height_0_blocks():
     with patch('builtins.input', side_effect=['0', '7']):
         result = task.task_5()
-        expected = 2
+        expected = 3
         assert result == expected
 
 def test_pyramid_height_negative_input():
@@ -181,5 +181,5 @@ def test_pyramid_height_negative_input():
 def test_large_number_of_blocks():
     with patch('builtins.input', side_effect=['100000']):
         result = task.task_5()
-        expected = 447
+        expected = 446
         assert result == expected
