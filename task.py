@@ -73,7 +73,6 @@ def task_4():
         else:
             user = (user * 3) + 1
             result.append(user)
-
     return result
 
 def task_5():
